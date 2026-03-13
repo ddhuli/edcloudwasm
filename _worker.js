@@ -31,7 +31,7 @@ const proxyStrategyOrder = ['socks', 'http', 'turn', 'nat64'];
 const dohEndpoints = ['https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query'];
 const dohNatEndpoints = ['https://cloudflare-dns.com/dns-query', 'https://dns.google/resolve'];
 const proxyIpAddrs = {EU: 'ProxyIP.DE.CMLiussss.net', AS: 'ProxyIP.SG.CMLiussss.net', JP: 'ProxyIP.JP.CMLiussss.net', US: 'ProxyIP.US.CMLiussss.net'};//分区域proxyip
-const finallyProxyHost = 'ProxyIP.CMLiussss.net';//兜底proxyip
+const finallyProxyHost = 'bpb.yousef.isegaro.com';//兜底proxyip
 // 订阅和面板使用的优选ip地址
 const ipListAll = [
     '172.64.151.241', '172.64.153.2', '104.18.39.123', '104.18.42.218', '172.64.154.125', '104.18.36.15', '172.64.145.202', '172.64.149.99',
