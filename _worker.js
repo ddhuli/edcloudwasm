@@ -628,7 +628,7 @@ const handlePost = async (request) => {
     const state = {socks5State: 0, tcpWriter: null, tcpSocket: null};
     const _maxChunkLen = maxChunkLen;
     let sessionBuffer = new ArrayBuffer(131072);
-    const isGrpc = !(request.headers.get('Referer') || '').includes('x_padding');
+    const isGrpc = !(request.headers.get('Referer') || '').includes('x_padding', 14);
     const responseHeaders = new Headers(xhttpResponseHeaders);
     if (isGrpc) {
         responseHeaders.set('Content-Type', 'application/grpc');
