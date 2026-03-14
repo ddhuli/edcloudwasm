@@ -83,7 +83,6 @@ const getEnv = (env) => {
     return config;
 };
 const initializeWasm = (env) => {
-    if (isInitialized) return;
     const {uuid, password, user, pass} = getEnv(env);
     const cleanUuid = uuid.replace(/-/g, "");
     if (cleanUuid.length === 32) {
@@ -773,7 +772,7 @@ const getSub = async (request, url, uuid) => {
 };
 export default {
     async fetch(request, env) {
-        initializeWasm(env);
+        if (!isInitialized) initializeWasm(env);
         if (request.method === 'POST') return handlePost(request);
         if (request.headers.get('Upgrade') === 'websocket') {
             const {0: clientSocket, 1: webSocket} = new WebSocketPair();
